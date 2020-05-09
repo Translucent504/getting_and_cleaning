@@ -9,6 +9,7 @@ test <- read_csv("averaged_data.csv", col_types = cols(activity="c", .default=co
 ```
 The loaded test tibble should be 180x68 dimensional.
 
+Refer to the [Codebook](CodeBook.md) for variable names and definitions and the details of transformations that are the result of running [run_analysis](run_analysis.R)
 
 # Project Requirements and Info:
 The purpose of this project is to demonstrate your ability to collect, work with, and clean a data set. The goal is to prepare tidy data that can be used for later analysis. You will be graded by your peers on a series of yes/no questions related to the project. You will be required to submit: 
