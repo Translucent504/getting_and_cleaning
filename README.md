@@ -2,10 +2,10 @@
 Course Project for Getting and Cleaning Data (John Hopkins Data Science)
 
 # How to Load Final Averaged Dataset:
-Either download the **averaged_data.csv** file or keep the **run_analysis.R** script in a folder that contains a **raw_data** folder with the UCI dataset. To load the **averaged_data.csv** file simply load the tidyverse and then use:
+Either download the **averaged_data.txt** file or keep the **run_analysis.R** script in a folder that contains a **raw_data** folder with the UCI dataset. To load the **averaged_data.txt** file simply use:
 ```{r}
 library(tidyverse)
-test <- read_csv("averaged_data.csv", col_types = cols(activity="c", .default=col_number()))
+test <- read.table("averaged_data.txt", header=TRUE)
 ```
 The loaded test tibble should be 180x68 dimensional.
 

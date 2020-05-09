@@ -1,6 +1,6 @@
 library(tidyverse)
 
-if(!file.exists("averaged_data.csv")){
+if(!file.exists("averaged_data.txt")){
     
     # Merge the training and the test sets to create one data set.
     features <- read_delim("raw_data/features.txt", " ", col_names=FALSE)
@@ -106,7 +106,7 @@ if(!file.exists("averaged_data.csv")){
     # the average of each variable for each activity and each subject.
     mean_std <- mean_std %>% group_by(activity, subject_id)
     final_average_dataset <- mean_std %>% summarise_all(mean, na.rm=TRUE)
-    write.csv(final_average_dataset, file = "averaged_data.csv", row.names = FALSE)
+    write.table(final_average_dataset, file = "averaged_data.txt", row.names = FALSE)
 }
 
 
